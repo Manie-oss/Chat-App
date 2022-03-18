@@ -1,6 +1,6 @@
 const { Router } = require("express");
-const UserService = require("../../services/user");
-const { RESPONSE_CODES } = require("../../utils/constants");
+const UserService = require("../services/user");
+const { RESPONSE_CODES } = require("../utils/constants");
 
 const userRouter = Router();
 

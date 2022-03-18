@@ -5,7 +5,8 @@ const router = require('./routes');
 const app = express();
 port = process.env.PORT || 8080;
 
-app.use(router);
+app.use(express.json());
+app.use('/v1', router);
 
 app.listen(port, () => {
     console.log(`Server started listening on port: ${port}`);

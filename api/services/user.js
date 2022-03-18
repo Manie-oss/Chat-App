@@ -12,6 +12,11 @@ class UserService {
         const newUser = db.User(user);
         return await db.save();
     }
+
+    static async isCorrectPassword(username, hashedPassword) {
+        const { password } = await db.User.findOne({username}).select('password').exec();
+        return password === hashedPassword;
+    }
 }
 
 module.exports = UserService;
