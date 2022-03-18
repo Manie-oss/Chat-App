@@ -4,4 +4,6 @@ const userSchema = {
     phone: String
 }
 
-module.exports = userSchema;
+module.exports = function(db) {
+    return db.model('User', userSchema);
+}

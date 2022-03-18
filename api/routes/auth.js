@@ -1,5 +1,4 @@
 const { Router } = require("express");
-const { username } = require("../db/schemas/user");
 const AuthService = require("../services/auth");
 const UserService = require("../services/user");
 const { RESPONSE_CODES } = require("../utils/constants");

@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const userSchema = require('./schemas/user');
+const createUserModel = require('./models/user');
 
 mongoose.connect(process.env.MONGODB_URL);
 
-const User = mongoose.model('User', userSchema);
+const User = createUserModel(mongoose);
 
 module.exports = {
     User
